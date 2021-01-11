@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(b870d03d-dfcc-4300-85d0-cae7c835b125)'
+    appType: 'webAppLinux'
+    appName: 'webapp'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'STATICSITE|1.0'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
